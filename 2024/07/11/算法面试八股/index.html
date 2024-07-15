@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="NgHon">
+    
+    <title>
+        
+            算法面试八股 |
+        
+        Han&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/61865995?v=4">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Han's Blog","author":"NgHon","avatar":"https://avatars.githubusercontent.com/u/61865995?v=4","logo":"https://avatars.githubusercontent.com/u/61865995?v=4","favicon":"https://avatars.githubusercontent.com/u/61865995?v=4"},"menu":{"home":"/ || fa-solid fa-home","archives":"/archives  || fa-solid fa-box-archive","categories":"/categories || fa-solid fa-layer-group","about":"/about   || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"The Future Only Depends on Current State, Not the History.","hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/realnghon","weixin":"img | ./images/wechat.jpg","qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"nghon@outlook.com"}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":false,"custom_badge":["One","Two","Three","萌新"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":true,"trigger":"auto","unescape":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.0"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/61865995?v=4">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Han&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                ABOUT
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                </span>
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            ABOUT
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        算法面试八股
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="https://avatars.githubusercontent.com/u/61865995?v=4">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">NgHon</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-07-11 22:20</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Mon Jul 15 2024 20:27:34 GMT+0800">2024-07-15 20:27</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E9%9D%A2%E7%BB%8F/">面经</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <p>写在秋招之前，写在变卦之前</p>
+<span id="more"></span>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>面试难免会问一下八股文，这里总结一下常见的算法面试八股，也作为自己找工作的必知必会。</p>
+<h2 id="基本算法知识"><a class="markdownIt-Anchor" href="#基本算法知识"></a> 基本算法知识</h2>
+<h3 id="二分类评估指标有哪些"><a class="markdownIt-Anchor" href="#二分类评估指标有哪些"></a> 二分类评估指标有哪些？</h3>
+<ol>
+<li><strong>准确率（Accuracy）</strong>：正确分类的样本占总样本的比例。
+<ol>
+<li>公式： $ Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $</li>
+<li>适用场景：当正负样本分布较为均衡时，准确率是一个合适的评估指标。</li>
+</ol>
+</li>
+<li><strong>精准率（Precision）</strong>：预测为正类样本中，实际为正类样本的比例。
+<ol>
+<li>公式： $ Precision = \frac{TP}{TP + FP} $</li>
+<li>适用场景：当关注假阳性（False Positive）成本较高时，精确率是一个重要的评估指标。</li>
+</ol>
+</li>
+<li><strong>召回率（Recall）</strong>：实际为正类样本中被预测为正的比例。
+<ol>
+<li>公式： $ Recall = \frac{TP}{TP + FN} $</li>
+<li><strong>适用场景：关注漏检成本比较高的场景，为了最大化找到正例数量，如医疗诊断，需要确保不遗漏任何实际患者。</strong></li>
+</ol>
+</li>
+<li><strong>F1-Score</strong>：准确率和召回率的调和平均值。
+<ol>
+<li>公式： $ F1-Score = 2 * \frac{Precision * Recall}{Precision + Recall} $</li>
+<li>适用场景：当需要在精准率和召回率之间进行权衡时使用。</li>
+</ol>
+</li>
+<li><strong>ROC Curve &amp; AUC</strong>：不同阈值（分类模型的参数，决策阈值较低时，更多的样本被分为正类，可能提高召回率，但也同时增加假阳性率；当决策阈值较低时，更多的样本被分为负类，可能提高特异度，但也同时增加假阴性率）下的真阳性率（True Positive Rate）和假阳性率（False Positive Rate）的曲线。
+<ol>
+<li>AUC (Area Under Curve)：ROC 曲线下方的面积，它越高，说明模型预测能力越好。</li>
+<li>适用场景：在数据不平衡时可以用AUC来评估模型性能。</li>
+</ol>
+</li>
+<li><strong>混淆矩阵（Confusion Matrix）</strong>：展示了模型预测结果的分布情况。
+<ol>
+<li>适用场景：提供详细的错误类型分布，帮助分析错误类型。</li>
+</ol>
+</li>
+<li><strong>特异度（Specificity）</strong>：实际为负类样本中被预测为负的比例。
+<ol>
+<li>公式： $ Specificity = \frac{TN}{TN + FP} $</li>
+<li><strong>适用场景：关注误报成本较高的场景，为了最大化正确识别的负例数量，如判定垃圾邮件，要避免将正常邮件判定为垃圾邮件。</strong></li>
+</ol>
+</li>
+</ol>
+<h3 id="bpr-loss-是什么"><a class="markdownIt-Anchor" href="#bpr-loss-是什么"></a> BPR Loss 是什么？</h3>
+<p>BPR Loss（Bayesian Personalized Ranking Loss）是一种用于推荐系统中的排名损失函数，适用于处理隐式反馈数据，如用户点击、浏览记录等，这类数据没有显示的评分。目的是使得模型能够根据用户的历史交互行为，推荐对用户更相关的物品。</p>
+<p>$ L_{BPR}=-\sum_{(u,i,j)\in D_S}\ln\sigma(\hat{y}_{uij})+\lambda|\Theta|^2 $</p>
+<ul>
+<li>$ \hat y_{uij}=\hat r_{ui}-\hat r_{uj}  $ ：其中 $ \hat r_{ui} $ 和 $ \hat r_{uj} $ 分别是用户 $ u $ 对物品 $ i $ 和 $ j $ 的预测评分。</li>
+<li>$ D_S $ ：训练集，其中每个样本是一个三元组 $ (u,i,j)  $ ，表示用户 $ u  $ 对物品 $ i $ 的偏好高于物品 $ j $ 。</li>
+<li>$ \lambda|\Theta|^2 $ 是正则化项，用于防止模型过拟合。</li>
+</ul>
+<h3 id="dropout在预测和训练阶段的区别"><a class="markdownIt-Anchor" href="#dropout在预测和训练阶段的区别"></a> Dropout在预测和训练阶段的区别？</h3>
+<ol>
+<li>训练阶段
+<ol>
+<li>随机丢弃神经元：在训练阶段，对每一层的每个神经元，按照一个设定的概率 $ p $ 随机将一些神经元的输出设为零，被丢弃的神经元在该次迭代中不再参与计算。这样可以防止过拟合，提高模型的泛化能力。</li>
+<li>缩放激活值：为保持每一层的激活值的期望不变，未被丢弃的神经元的输出需要除以 $ 1-p $ 。</li>
+</ol>
+</li>
+<li>预测阶段
+<ol>
+<li>不进行丢弃：所有神经元都参与计算，保持网络结构完整。</li>
+<li>不进行缩放：预测时，不需要对激活值进行缩放，因为在训练阶段中已经通过缩放保留下来的神经元的激活值来达到平衡。</li>
+</ol>
+</li>
+</ol>
+<h2 id="llm"><a class="markdownIt-Anchor" href="#llm"></a> LLM</h2>
+<h3 id="给一个网络结构如何计算模型的参数量"><a class="markdownIt-Anchor" href="#给一个网络结构如何计算模型的参数量"></a> 给一个网络结构，如何计算模型的参数量？</h3>
+<p>知道常见网络结构的参数量计算方法，然后就是加法和乘法了。</p>
+<ol>
+<li>全连接层：参数包括权重和偏置，如果输入层有 $ N_{in} $ 个神经元，输出层为 $ N_{out} $ ，则参数量 =  $ N_{in} \times N_{out} + N_{out} $</li>
+<li>卷积层：参数包括卷积核的权重和偏置，如果卷积核大小为 $ k $ ，输入通道数为 $ C_{in} $ ，输出通道数为 $ C_{out}  $ ，则参数量 =  $ C_{in} \times C_{out} \times k^2 + C_{out} $</li>
+<li>规范化层：
+<ol>
+<li>BatchNorm：对每个特征通道进行规范化，学习两个参数，缩放参数 $ \gamma $ 和偏移参数 $ \beta $ ，参数量 =  $ 2 \times C_{out} $</li>
+<li>LayerNorm：对每个输入样本进行规范化，学习两个参数，缩放参数 $ \gamma $ 和偏移参数 $ \beta $ ，参数量 =  $ 2 \times C_{in} $</li>
+</ol>
+</li>
+</ol>
+<h3 id="transformer-中为什么使用layernorm而不是其他的"><a class="markdownIt-Anchor" href="#transformer-中为什么使用layernorm而不是其他的"></a> Transformer 中为什么使用LayerNorm而不是其他的？</h3>
+<p>Normalization首先是为了<strong>保证训练的稳定性</strong>，防止梯度消失或爆炸；其次，规范化每次的输入分布，并且该范围属于激活函数的“舒适区”，<strong>加速模型的收敛</strong>；最后，让模型<strong>训练不再那么依赖权重的初始化</strong>。</p>
+<p><strong>为什么不用BatchNorm？</strong></p>
+<ol>
+<li>Batch需要大，小的Batch训练不稳定。因为BatchNorm需要跨样本的Normalize，所以采样要足够大才能捕捉到样本的分布。</li>
+<li>加大Batch需要额外的通信时间。一个Batch很可能分布在不同的节点上。目前大概有两种解法，一种是mini-batch放弃跨机器通信，一种是Pytorch的SyncBatchNorm，尽量的减少通信数据。</li>
+<li>训练和预测的不一致性。训练的时候有大批的数据可以组成样本，但是预测时，如果只预测一个样本，那么BatchNorm就无法正常工作。所以在预测的时候实际上是采用了训练时的数据分布来进行Normalize，这就要求训练和预测的分布一致，那么模型的泛化能力就没那么强。</li>
+<li>不适合长度不固定的NLP序列。因为每个Batch最后总有些pad，这些pad会影响BatchNorm的数据分布。如果把pad都不参与计算，那么相当于batch越来越小。</li>
+</ol>
+<p><strong>LayerNorm</strong>改成了按特征进行归一化，所以可以处理长度不固定的NLP序列，而且训练和预测的分布一致。多项实验验证了LayerNorm在Transformer中效果更好。</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E9%9D%A2%E7%BB%8F/">面经</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/07/12/Python%20%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"
+                                   title="Python并发编程"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Python并发编程</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86"><span class="nav-text"> 基本算法知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BB%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text"> 二分类评估指标有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bpr-loss-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> BPR Loss 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dropout%E5%9C%A8%E9%A2%84%E6%B5%8B%E5%92%8C%E8%AE%AD%E7%BB%83%E9%98%B6%E6%AE%B5%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text"> Dropout在预测和训练阶段的区别？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#llm"><span class="nav-text"> LLM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E4%B8%80%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0%E9%87%8F"><span class="nav-text"> 给一个网络结构，如何计算模型的参数量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transformer-%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8layernorm%E8%80%8C%E4%B8%8D%E6%98%AF%E5%85%B6%E4%BB%96%E7%9A%84"><span class="nav-text"> Transformer 中为什么使用LayerNorm而不是其他的？</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">NgHon</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86"><span class="nav-text"> 基本算法知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BB%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text"> 二分类评估指标有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bpr-loss-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> BPR Loss 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dropout%E5%9C%A8%E9%A2%84%E6%B5%8B%E5%92%8C%E8%AE%AD%E7%BB%83%E9%98%B6%E6%AE%B5%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text"> Dropout在预测和训练阶段的区别？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#llm"><span class="nav-text"> LLM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E4%B8%80%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0%E9%87%8F"><span class="nav-text"> 给一个网络结构，如何计算模型的参数量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transformer-%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8layernorm%E8%80%8C%E4%B8%8D%E6%98%AF%E5%85%B6%E4%BB%96%E7%9A%84"><span class="nav-text"> Transformer 中为什么使用LayerNorm而不是其他的？</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>

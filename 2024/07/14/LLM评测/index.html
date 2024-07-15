@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="NgHon">
+    
+    <title>
+        
+            大模型测评，没那么神秘~ |
+        
+        Han&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/61865995?v=4">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Han's Blog","author":"NgHon","avatar":"https://avatars.githubusercontent.com/u/61865995?v=4","logo":"https://avatars.githubusercontent.com/u/61865995?v=4","favicon":"https://avatars.githubusercontent.com/u/61865995?v=4"},"menu":{"home":"/ || fa-solid fa-home","archives":"/archives  || fa-solid fa-box-archive","categories":"/categories || fa-solid fa-layer-group","about":"/about   || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"The Future Only Depends on Current State, Not the History.","hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/realnghon","weixin":"img | ./images/wechat.jpg","qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"nghon@outlook.com"}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":false,"custom_badge":["One","Two","Three","萌新"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":true,"trigger":"auto","unescape":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.0"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/61865995?v=4">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Han&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                ABOUT
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                </span>
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            ABOUT
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+                <div class="post-content-top border-box"
+                     style="height: 13.8rem"
+                >
+                    <div class="cover-post-title">
+                        大模型测评，没那么神秘~
+                    </div>
+                    <img class="post-cover" src="https://realnghon.github.io/picx-images-hosting/75a4cc6cc51e38c21838c5f96faa0ec6_LLM-Evaluation-1024x538.6pne9zb73d.png"
+                         onerror="this.style.display='none'"
+                    >
+                </div>
+            
+
+            <div class="post-content-bottom border-box has-cover">
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="https://avatars.githubusercontent.com/u/61865995?v=4">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">NgHon</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-07-14 14:00</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sun Jul 14 2024 21:36:09 GMT+0800">2024-07-14 21:36</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/LLM/">LLM</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <p>重生之我在MiniMax做<strong>标师</strong></p>
+<span id="more"></span>
+<h1 id="写在前面"><a class="markdownIt-Anchor" href="#写在前面"></a> 写在前面</h1>
+<p>写这篇笔记来记录在MiniMax做模型测评实习生的工作。大模型测评，真没那么神秘~</p>
+<h1 id="模型测评是什么"><a class="markdownIt-Anchor" href="#模型测评是什么"></a> 模型测评是什么？</h1>
+<p>模型测评是衡量大语言模型功能和能力的关键过程。通过系统化的评估，能够清晰地识别出每个模型的优势和局限性。这不仅为开发人员提供了精确的改进方向，还能帮助使用者选择最适合特定需求的模型。</p>
+<p>目前在做的主要是<strong>文本生成</strong>模型的测评。除了在LLM训练过程中使用数值性能指标（如困惑度、BLEU）之外，前沿的LLMs的真正性能是根据一系列Benchmarks或者Evals来判断的：</p>
+<p>根据测评方式的差异大致可以分为以下三种：</p>
+<ul>
+<li>
+<p><strong>Human-Evaluated</strong>，通过人类评审员来评估模型的输出质量。如<a class="link" target="_blank" rel="noopener" href="https://chat.lmsys.org/">LMSYS Chatbot Arena<i class="fas fa-external-link-alt"></i></a>，让用户对不同模型针对同一Query的回复进行投票。</p>
+</li>
+<li>
+<p><strong>AI-Evaluated</strong>，通过AI来评估模型的输出。如<a class="link" target="_blank" rel="noopener" href="https://argilla.io/blog/mantisnlp-rlhf-part-4/">RLAIF<i class="fas fa-external-link-alt"></i></a>使用AI模型来进行强化学习反馈，以优化目标模型的性能。</p>
+</li>
+<li>
+<p><strong>Evaluation Dataset</strong>，使用预先构建好的标准化数据集来评估模型的性能。如<a class="link" target="_blank" rel="noopener" href="https://github.com/openai/human-eval">HumanEval<i class="fas fa-external-link-alt"></i></a>、<a class="link" target="_blank" rel="noopener" href="https://github.com/hkust-nlp/ceval">Ceval<i class="fas fa-external-link-alt"></i></a>包含来自不同学科的问题，用来检测模型对各种语言数据和复杂问题的处理能力。</p>
+</li>
+</ul>
+<h1 id="模型测评的对象"><a class="markdownIt-Anchor" href="#模型测评的对象"></a> 模型测评的对象？</h1>
+<p>构建大模型主要有三个步骤<a href="#f1" id="a1" style="text-decoration:none;">[1]</a>，同时我们也就可以得到不同阶段的模型，这些模型都可以作为测评的对象，并且不同模型的评测方法也会有所不同。</p>
+<h2 id="pretrain"><a class="markdownIt-Anchor" href="#pretrain"></a> Pretrain</h2>
+<p>在海量的无监督数据上对LLM进行预训练，目标是预测下一个token。训练结束后，我们会得到一个模型叫做Base Model，它可以为每一个词的序列分配潜在下一个词选项的概率。通俗的讲，能做的事情就像是输入法的智能提示一样，不断地完成一段话。当用户提一个问题时，它可能会回答这个问题，也可能会生成一系列额外的问题，也可能会说这是在…背景下提出的一个重要问题，等等。所有这些都是自然语言文本中问题的有效延续。</p>
+<p>我们可以通过对输入文本进行精心设计，使它们的延续能够解决我们的问题，从而让模型执行所需的语言操作（这就是所谓的 “提示工程”），但对于非专业用户来说，这并不是一种非常方便的交互模式。</p>
+<p>如果我们希望模型能够始终如一地回答问题，而不仅仅是完成问题，我们就需要引导它采取这种行为。这种引导被称为<strong>微调</strong>，即继续训练预先训练好的模型，使其行为符合我们的期望。</p>
+<h2 id="supervised-fine-tuning"><a class="markdownIt-Anchor" href="#supervised-fine-tuning"></a> Supervised Fine-Tuning</h2>
+<p>在这个阶段，我们使用人工标注的数据集对模型进行微调。这些数据集由问题或指令，以及与之对应的期望输出组成。</p>
+<p>模型的训练目标仍然是“根据前缀预测下一个标记”，但现在是在这些 <code>{指令-输出对}</code> 的数据集上进行。通过这种方式，模型学习如何通过执行指令来回应用户的请求。换句话说，模型通过观察给定查询的正确输出示例，学习如何生成类似的回应。我们的期望是，模型能够将这种行为泛化到训练中未见过的新查询上。</p>
+<h2 id="reinforcement-learning-from-human-feedback"><a class="markdownIt-Anchor" href="#reinforcement-learning-from-human-feedback"></a> Reinforcement Learning from Human Feedback</h2>
+<p>经过监督微调后，模型应该能针对给定的提示给出合适的回答，但是模型可能仍然无法正确回答我们提出的每一个问题。<strong>它可能仍然无法评估哪些回答是好的，哪些是不好的</strong>；它可能过度拟合于训练数据；或者可能输出一些不正确或有害的回答。因此需要通过强化学习来使其能够更好地理解人类的偏好。</p>
+<p>在强化学习设置中，我们向模型提供指令，模型生成答案。评分机制（例如，人类）阅读生成的答案，并告诉模型这个答案是不是好的。模型的目标是学习如何以获得高分的方式回答。另一种机制是模型生成多个答案，评分机制告诉模型哪个是最好的。模型的目标是学习产生得分更高的答案，而不是得分较低的答案。在两种情况下，模型通过创建自己的答案并接收反馈来学习。</p>
+<h3 id="为什么强化学习是必要的"><a class="markdownIt-Anchor" href="#为什么强化学习是必要的"></a> 为什么强化学习是必要的？</h3>
+<p>在监督训练中，我们向模型展示一个问题及其正确答案，并训练模型复制提供的答案。有两种情况：</p>
+<ol>
+<li>
+<p>模型“知道”答案。在这种情况下，监督训练正确地推动模型将答案与问题关联起来，希望推动它在未来执行类似的步骤来回答类似的问题。这是期望的行为。</p>
+</li>
+<li>
+<p>模型不知道答案。在这种情况下，<strong>监督训练无论如何都会推动模型将答案与问题关联起来</strong>。现在，有两种选择。它可能推动模型记住这个特定的<code>{问题--答案对}</code>。这并不有害，但也不是非常有效，因为我们的目标是让模型泛化并学会回答任何问题，而不仅仅是那些在指令训练数据中的问题。我们希望模型能够泛化。但如果我们成功训练模型在这些情况下进行泛化，那么我们实际上是在教模型编造东西！这会积极鼓励模型“撒谎”。这是不好的。</p>
+</li>
+</ol>
+<p>因为不知道模型知道还是不知道，我们无法避免情况2，这对监督训练来说是一个真实且严重的问题。我们不能仅使用纯监督学习来推动模型产生真实答案，因此我们必须使用强化学习来实现。与监督设置相比，强化学习设置不会积极鼓励模型撒谎：即使模型最初猜对了一些答案并错误地学习到“胡编乱造”的行为，从长远来看，它将因编造的答案（可能是不正确的）而得到糟糕的分数，并学会采用依赖其内部知识或放弃的策略。</p>
+<h3 id="如何教会大模型放弃"><a class="markdownIt-Anchor" href="#如何教会大模型放弃"></a> 如何教会大模型放弃？</h3>
+<p>如果模型不知道答案，我们希望它弃权并回答“我不知道”或类似的回答。这并非易事。在监督学习环境中很难做到，因为我们不知道模型知道还是不知道。我们可以引导它不回答某些类型的问题，而是回答“我不知道”。然而，这种方法并不能真正实现我们的目标——即在模型不确定答案时才回避回答。相反，它只是一种粗略的替代方案，远远不够理想。</p>
+<p>然而，这在强化学习环境中也具有挑战性：模型可能从一开始就不会产生“我不知道”的回答，因此我们无法鼓励它生成这样的回答。一种解决方法是先从一些监督训练开始，学习在某些情况下产生“我不知道”的回答，然后继续使用强化学习。在监督学习和强化学习的情况下，我们都担心模型会学会过度生成“我不知道”。这是一个开放的问题。 一种可能的解决方案是设计一个奖励机制，对正确答案给予很高的分数，对回避答案给予中低分数，对错误答案给予强烈的负面分数。但要把这一点做对并不容易。</p>
+<p>#　模型评测框架</p>
+<p>尽管许多公开数据集都提供了相应的测评脚本，但在实际的大规模模型评测中，这些脚本往往难以直接复用。原因如下：</p>
+<ul>
+<li>评测任务的多样性：在实际工作中，我们可能需要进行几十甚至上百个不同的测评任务。</li>
+<li>代码复用性要求：为了提高效率和可维护性，我们非常注重代码的复用性。</li>
+<li>仓库管理难度：直接使用各个数据集的脚本会导致仓库代码冗余，难以有效管理。</li>
+<li>学习成本高：每个数据集的脚本可能有不同的使用方式，学习和适应每一个都需要大量时间。</li>
+</ul>
+<p>在实际的工作中，我们使用<a class="link" target="_blank" rel="noopener" href="https://github.com/EleutherAI/lm-evaluation-harness">Harness模型评测框架<i class="fas fa-external-link-alt"></i></a>，Harness是一个灵活、可扩展的大模型评测开源框架，它兼容vllm、api调用等不同的推理方式，且推理链路和评测链路解耦，目前大量的开源工作的测评使用该框架。</p>
+<h1 id="llm-benchmark"><a class="markdownIt-Anchor" href="#llm-benchmark"></a> LLM Benchmark</h1>
+<p>目前，LLM评测数据集的数量呈现激增趋势。然而，这些评测集的有效性和可靠性面临着诸多挑战。首要问题是数据泄露，即评测数据可能已被包含在模型的训练集中，导致评测结果出现正偏差。其次，由于知识的快速迭代和语言使用的动态演变，静态数据集难以捕捉最新的语言现象和知识状态，从而影响了评测的时效性（timeliness）。此外，传统的封闭式问答形式可能无法全面评估模型在开放域对话和复杂推理任务中的表现。这些因素综合导致了基于传统静态或封闭式数据集的评测方法在反映大模型的实际能力方面存在显著局限性。因此，开发更具动态性、多样性和挑战性的评测方法成为了当前研究的重要方向。</p>
+<p>高质量的Benchmark应具备以下特点：</p>
+<ul>
+<li>能够稳健地区分模型能力；</li>
+<li>反映现实世界用例中的人类偏好</li>
+<li>频繁更新以避免过拟合或测试集泄露。</li>
+</ul>
+<p>我们在本节着重介绍一些Golden Benchmark：</p>
+<h2 id="arena-hard下一代llm评测利器"><a class="markdownIt-Anchor" href="#arena-hard下一代llm评测利器"></a> Arena Hard：下一代LLM评测利器</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://github.com/lm-sys/arena-hard-auto">Arena Hard<i class="fas fa-external-link-alt"></i></a>是一个是一个革新性的评测框架，旨在为大语言模型(LLMs)的性能评估提供高质量、动态更新的基准。它的独特之处在于其自动化的数据收集和处理流程，以及基于AI的评估方法。</p>
+<h3 id="数据来源"><a class="markdownIt-Anchor" href="#数据来源"></a> 数据来源</h3>
+<p>Arena Hard的数据来源于Chatbot Arena的实时数据。它使用了一套复杂的AI筛选系统。通过七个指标来评判提示的质量,包括具体性、领域知识、复杂性等。模仿人类专家是如何筛选高质量问题的，做得更快、更一致。</p>
+<h3 id="竞争性评估"><a class="markdownIt-Anchor" href="#竞争性评估"></a> 竞争性评估</h3>
+<p>在竞技设置中，使用所选提示对不同的语言模型（LLMs）进行评估。选择多个LLMs进行成对比较。每个模型对同一个提示生成响应。而后使用LLM作为评估员，对两个模型的响应进行评分，判断哪个模型在每个提示下表现更好。根据评估员的判断，对每次成对比较的结果进行打分。随着新的模型加入评测，LeaderBoard会动态更新。</p>
+<h3 id="评估指标"><a class="markdownIt-Anchor" href="#评估指标"></a> 评估指标</h3>
+<p>为了确保评估结果的公平性和准确性，Arena Hard引入了以下评估指标：</p>
+<ul>
+<li>分离度与置信度（Separability with Confidence）：衡量基准预测模型性能差异的能力，关注置信区间的非重叠性。</li>
+<li>置信区间一致性（Agreement with Confidence Interval）：评估基准生成的模型排名与人类偏好的一致性，同时考虑置信度和正确性。</li>
+<li>对排名Brier评分（Pair Rank Brier Score）：评估基准的准确性及其量化预测不确定性的能力，通过对正确预测有信心的评分和对错误预测的惩罚来实现。</li>
+</ul>
+<p>这些指标不仅告诉我们哪个模型更好，还告诉我们有多确定它更好。</p>
+<h3 id="局限性"><a class="markdownIt-Anchor" href="#局限性"></a> 局限性</h3>
+<ul>
+<li>Verbosity bias：LLM可能偏好那些提供更多信息和细节的响应，即使这些响应并不一定更准确或更相关。</li>
+<li>Self-bias：如GPT-4裁判可能更喜欢GPT-4的回答。</li>
+</ul>
+<h2 id="wildbench更全面-更先进的benchmark"><a class="markdownIt-Anchor" href="#wildbench更全面-更先进的benchmark"></a> WildBench：更全面、更先进的Benchmark</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://github.com/allenai/WildBench">WildBench<i class="fas fa-external-link-alt"></i></a>同样也是从真实用户与聊天机器人的对话中提取数据，以评估大型语言模型性能的基准。相比与Arena Hard，主要有以下几方面的优势：</p>
+<ul>
+<li><strong>数据分布更贴近真实用户需求</strong>：考虑了实际用户的任务分布，涵盖了信息查询、创意写作、翻译、编程和数学等多种任务类别，更加平衡和多样化。相比之下，Arena Hard过度集中于编码和调试任务(占比超过57%)，可能无法全面反映模型在其他关键领域的能力。</li>
+<li><strong>长上下文处理能力</strong>：WildBench包括长达四轮的对话历史，能够更好地评估模型在处理连续对话和长期依赖关系时的表现，而这是ArenaHard所缺乏的。</li>
+<li><strong>评估指标的改进</strong>：采用了WB-Reward和WB-Score两种新的评估指标，这些指标与人类评价者的一致性更高。</li>
+<li><strong>使用多个基线模型进行成对比较</strong>：多个基线模型的比较可以减少单一模型带来的偏差和噪音。不同的基线模型可能有不同的强项和弱项，通过比较它们的表现，可以获得更全面的评估结果。</li>
+</ul>
+<h3 id="评估指标-2"><a class="markdownIt-Anchor" href="#评估指标-2"></a> 评估指标</h3>
+<ul>
+<li>WB-Reward：基于细粒度成对比较的评估指标，通过LLM评估员生成五种可能的评价结果(从"Much better"到"Much worse")，并引入长度偏差修正机制：如果胜者的响应字符数超过败者一定数量，将“稍好/稍差”转换为平局，以减轻长度偏差的影响。</li>
+<li>WB-Score：基于单独评分的评估指标，用于快速评估模型响应质量。每个任务使用特定的检查表（checklist）评价响应的准确性、完整性和相关性。相比成对比较，单独评分方法更加高效和经济，适合大规模评估。</li>
+</ul>
+<h3 id="局限性-2"><a class="markdownIt-Anchor" href="#局限性-2"></a> 局限性</h3>
+<ul>
+<li>语言范围限制：WILDBENCH的当前版本专注于英语，这排除了对其他语言的LLM评估。（大模型公司可以根据自己的回流数据构建数据集，复刻流程，不仅可以解决语言限制问题，还能确保数据更贴近公司自身用户的需求和使用场景。）</li>
+<li>数据泄漏问题：为了生成排行榜，必须通过API发送测试数据，这可能导致用户查询和响应被记录并用于训练模型。（所有评测都存在这个问题，因此测试数据集需要不断更新，或者引入动态生成测试样本？）</li>
+<li>潜在偏见：数据来源于真实用户的查询，因此它继承了用户群体的潜在偏见，包括人口统计学偏见和兴趣偏见。（用户群体的偏见在某种程度上反映了实际使用场景。需要持续更新数据集以匹配当前用户群体的特征，还可以有意识地引入一些多样化的数据。）</li>
+</ul>
+<h1 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h1>
+<ol>
+<li><span id="f1">Yoav Goldberg. (2023). <a class="link" target="_blank" rel="noopener" href="https://gist.github.com/yoavg/6bff0fecd65950898eba1bb321cfbd81">Rl-for-Llms<i class="fas fa-external-link-alt"></i></a></span></li>
+</ol>
+
+                    
+                </div>
+
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                大模型测评，没那么神秘~
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                2024/07/14/LLM评测/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    Author
+                </div>
+                <div class="content">NgHon</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    Published
+                </div>
+                <div class="content">2024-07-14 14:00</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    License
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="Copy copyright info" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/LLM/">LLM</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/07/12/Python%20%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"
+                                   title="Python并发编程"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Python并发编程</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-text"> 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B5%8B%E8%AF%84%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> 模型测评是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B5%8B%E8%AF%84%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-text"> 模型测评的对象？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pretrain"><span class="nav-text"> Pretrain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#supervised-fine-tuning"><span class="nav-text"> Supervised Fine-Tuning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reinforcement-learning-from-human-feedback"><span class="nav-text"> Reinforcement Learning from Human Feedback</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%98%AF%E5%BF%85%E8%A6%81%E7%9A%84"><span class="nav-text"> 为什么强化学习是必要的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%94%BE%E5%BC%83"><span class="nav-text"> 如何教会大模型放弃？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#llm-benchmark"><span class="nav-text"> LLM Benchmark</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#arena-hard%E4%B8%8B%E4%B8%80%E4%BB%A3llm%E8%AF%84%E6%B5%8B%E5%88%A9%E5%99%A8"><span class="nav-text"> Arena Hard：下一代LLM评测利器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90"><span class="nav-text"> 数据来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AB%9E%E4%BA%89%E6%80%A7%E8%AF%84%E4%BC%B0"><span class="nav-text"> 竞争性评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text"> 评估指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-text"> 局限性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wildbench%E6%9B%B4%E5%85%A8%E9%9D%A2-%E6%9B%B4%E5%85%88%E8%BF%9B%E7%9A%84benchmark"><span class="nav-text"> WildBench：更全面、更先进的Benchmark</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87-2"><span class="nav-text"> 评估指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-2"><span class="nav-text"> 局限性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-text"> Reference</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">NgHon</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-text"> 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B5%8B%E8%AF%84%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> 模型测评是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B5%8B%E8%AF%84%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-text"> 模型测评的对象？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pretrain"><span class="nav-text"> Pretrain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#supervised-fine-tuning"><span class="nav-text"> Supervised Fine-Tuning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reinforcement-learning-from-human-feedback"><span class="nav-text"> Reinforcement Learning from Human Feedback</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%98%AF%E5%BF%85%E8%A6%81%E7%9A%84"><span class="nav-text"> 为什么强化学习是必要的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%94%BE%E5%BC%83"><span class="nav-text"> 如何教会大模型放弃？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#llm-benchmark"><span class="nav-text"> LLM Benchmark</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#arena-hard%E4%B8%8B%E4%B8%80%E4%BB%A3llm%E8%AF%84%E6%B5%8B%E5%88%A9%E5%99%A8"><span class="nav-text"> Arena Hard：下一代LLM评测利器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90"><span class="nav-text"> 数据来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AB%9E%E4%BA%89%E6%80%A7%E8%AF%84%E4%BC%B0"><span class="nav-text"> 竞争性评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text"> 评估指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-text"> 局限性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wildbench%E6%9B%B4%E5%85%A8%E9%9D%A2-%E6%9B%B4%E5%85%88%E8%BF%9B%E7%9A%84benchmark"><span class="nav-text"> WildBench：更全面、更先进的Benchmark</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87-2"><span class="nav-text"> 评估指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-2"><span class="nav-text"> 局限性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-text"> Reference</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
