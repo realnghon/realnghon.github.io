@@ -1,0 +1,20 @@
+---
+layout: base.njk
+permalink: "/posts/{{ page.fileSlug }}/"
+---
+<article class="article">
+  <header class="article-header">
+    <p class="kicker">{{ date | readableDate }}{% for topic in topics %} · {{ topic }}{% endfor %}</p>
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="article-lede">{{ description }}</p>{% endif %}
+  </header>
+  <div class="article-layout">
+    <div class="prose">{{ content | safe }}</div>
+    <aside class="article-sidebar">
+      <nav class="article-toc" aria-label="文章目录">
+        <p class="article-toc-title">文章目录</p>
+        <ol class="article-toc-list"></ol>
+      </nav>
+    </aside>
+  </div>
+</article>

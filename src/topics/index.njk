@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Index
+permalink: /topics/
+---
+<section class="page-intro">
+  <h1>Index</h1>
+  <p>Articles grouped by question and interest.</p>
+</section>
+{% for topic in collections.topicNames %}
+<section class="topic-group" id="{{ topic | topicSlug }}">
+  <div class="topic-title"><h2>{{ topic }}</h2></div>
+  <div class="post-list compact">
+    {% for post in collections.posts | filterByTopic(topic) %}<article class="post-row"><time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time><div><h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3><p>{{ post.data.description }}</p></div></article>{% endfor %}
+  </div>
+</section>
+{% endfor %}

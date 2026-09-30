@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Silas's research and writing notes on AI, Agent systems, and software engineering.">
+  <title>{% if title and title != 'Home' %}{{ title }} · Silas{% else %}Silas{% endif %}</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/katex.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-identity">
+      <a class="github-link" href="https://github.com/realnghon" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.72c-2.78.62-3.37-1.38-3.37-1.38-.46-1.2-1.12-1.52-1.12-1.52-.91-.64.07-.63.07-.63 1.01.08 1.54 1.07 1.54 1.07.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.2 9.2 0 0 1 12 6.9c.85 0 1.7.12 2.5.36 1.9-1.33 2.74-1.05 2.74-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.93-2.35 4.8-4.58 5.05.36.32.68.94.68 1.9v2.79c0 .27.18.6.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg>
+      </a>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/archive/">Archive</a>
+      <a href="/topics/">Topics</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+  <main class="container">{{ content | safe }}</main>
+  <script defer src="/assets/katex.min.js"></script>
+  <script defer src="/assets/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const main = document.querySelector("main");
+      if (!main) return;
+
+      const tocList = document.querySelector(".article-toc-list");
+      const article = document.querySelector(".prose");
+      if (!tocList || !article) return;
+
+      const headings = [...article.querySelectorAll("h2, h3")];
+      const usedIds = new Map();
+      const slugify = (text) => {
+        const base = text.toLowerCase().trim().replace(/[^\u3400-\u9fff\w\s-]/g, "").replace(/\s+/g, "-") || "section";
+        const count = usedIds.get(base) || 0;
+        usedIds.set(base, count + 1);
+        return count ? `${base}-${count + 1}` : base;
+      };
+
+      let currentGroup = null;
+      headings.forEach((heading) => {
+        if (!heading.id) heading.id = slugify(heading.textContent);
+        if (heading.tagName === "H2") {
+          currentGroup = document.createElement("details");
+          currentGroup.className = "toc-group";
+          const summary = document.createElement("summary");
+          const link = document.createElement("a");
+          link.href = `#${heading.id}`;
+          link.textContent = heading.textContent;
+          summary.appendChild(link);
+          currentGroup.appendChild(summary);
+          currentGroup.subsections = document.createElement("ol");
+          currentGroup.subsections.className = "toc-subsections";
+          currentGroup.appendChild(currentGroup.subsections);
+          tocList.appendChild(currentGroup);
+        } else if (currentGroup) {
+          const item = document.createElement("li");
+          const link = document.createElement("a");
+          link.href = `#${heading.id}`;
+          link.textContent = heading.textContent;
+          item.appendChild(link);
+          currentGroup.subsections.appendChild(item);
+        }
+      });
+
+      const links = [...tocList.querySelectorAll("a")];
+      const setActive = (id) => links.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`));
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActive(visible[0].target.id);
+      }, { rootMargin: "-96px 0px -68% 0px", threshold: [0, 1] });
+      headings.forEach((heading) => observer.observe(heading));
+
+      renderMathInElement(main, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+        throwOnError: false
+      });
+    });
+  </script>
+</body>
+</html>

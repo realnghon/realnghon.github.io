@@ -1,0 +1,46 @@
+---
+title: Home
+layout: base.njk
+---
+<section class="intro" aria-labelledby="intro-title">
+  <div class="intro-heading">
+    <h1 id="intro-title">Silas</h1>
+  </div>
+  <p class="intro-copy">Research notes on AI, Agent systems, and software.</p>
+</section>
+
+<section class="section-block" aria-labelledby="posts-title">
+  <div class="section-heading">
+    <h2 id="posts-title">Writing</h2>
+    <a class="section-link" href="/archive/">View all</a>
+  </div>
+  <div class="post-list">
+    {% for post in collections.posts | limit(5) %}
+      <article class="post-row">
+        <time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time>
+        <div>
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+          <div class="post-topics">
+            {% for topic in post.data.topics %}<a href="/topics/#{{ topic | topicSlug }}">{{ topic }}</a>{% endfor %}
+          </div>
+        </div>
+      </article>
+    {% else %}
+      <p class="empty">Articles are coming soon.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section-block topics-preview" aria-labelledby="topics-title">
+  <div class="section-heading">
+    <h2 id="topics-title">Index</h2>
+    <a class="section-link" href="/topics/">Browse topics</a>
+  </div>
+  <div class="topic-index">
+    {% for topic in collections.topicNames %}
+      {% set count = collections.posts | filterByTopic(topic) | length %}
+      <a href="/topics/#{{ topic | topicSlug }}"><span>{{ topic }}</span><small>{{ count }} {{ "article" if count == 1 else "articles" }}</small></a>
+    {% endfor %}
+  </div>
+</section>

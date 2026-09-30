@@ -1,0 +1,11 @@
+node_modules/
+_site/
+.DS_Store
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.crt
+*.secret
