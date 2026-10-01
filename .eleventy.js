@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/posts/synthetic-data-selection/assets": "posts/synthetic-data-selection/assets" });
+  eleventyConfig.addPassthroughCopy({ "src/posts/robust-distilled-datasets/assets": "posts/robust-distilled-datasets/assets" });
   eleventyConfig.addPassthroughCopy({ "node_modules/katex/dist/katex.min.css": "assets/katex.min.css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/katex/dist/fonts": "assets/fonts" });
   eleventyConfig.addPassthroughCopy({ "node_modules/katex/dist/katex.min.js": "assets/katex.min.js" });

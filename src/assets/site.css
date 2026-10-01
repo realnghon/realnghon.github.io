@@ -80,6 +80,10 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
 .prose .citation-block strong { color: var(--ink); }
 .prose img { display: block; max-width: 100%; height: auto; margin: 1.8em 0; }
 .prose .paper-figure { max-width: 360px; margin: 1.25em auto 1.5em; }
+.prose .paper-figure-wide { max-width: 600px; }
+.prose .paper-figure-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 1.25em 0 1.5em; }
+.prose .paper-figure-grid .paper-figure { width: 100%; max-width: none; margin: 0; }
+.prose .paper-figure-grid .paper-figure figcaption { font-size: .74rem; }
 .prose .paper-figure img { width: 100%; margin: 0; border: 1px solid var(--line); background: #fff; }
 .prose .paper-figure figcaption { margin-top: .6em; color: var(--muted); font-family: var(--sans); font-size: .8rem; line-height: 1.55; }
 .prose .math-block { overflow-x: auto; margin: 1.45em 0 1.65em; padding: .25em .2em; text-align: center; }
@@ -122,6 +126,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
   .article-layout { display: flex; flex-direction: column; gap: 26px; }
   .article-sidebar { position: static; order: -1; width: 100%; }
   .article-toc-list { display: grid; grid-template-columns: 1fr; gap: 1px; }
+  .prose .paper-figure-grid { grid-template-columns: 1fr; gap: 20px; }
+  .prose .paper-figure-grid .paper-figure { max-width: 360px; margin-inline: auto; }
   .prose { font-size: 1.03rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
